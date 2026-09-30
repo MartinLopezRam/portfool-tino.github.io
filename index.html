@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Martín López · Desarrollador | full stack</title>
+<meta name="description" content="Portafolio de Martín López: desarrollo front-end y full stack con Vue, Angular, React y C#/.NET.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#inicio">Martín López</a>
+  <nav aria-label="Secciones">
+    <a href="#proyectos">Proyectos</a>
+    <a href="#como-trabajo">Cómo trabajo</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <button id="theme" class="icon-btn" type="button" aria-label="Cambiar tema claro u oscuro">🌓</button>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <h1>Hola, soy Martín. Convierto diseños en sitios que funcionan.</h1>
+    <p>Soy desarrollador front-end / full stack. Tomo la propuesta de un diseñador y la llevo a código: interfaz responsiva, conectada a su backend y lista para producción. Me gusta aprender rápido, trabajar en equipo y ser claro con lo que sé y lo que estoy aprendiendo.</p>
+    <ul class="chips">
+      <li>Vue 3</li><li>TypeScript</li><li>Angular</li><li>React</li><li>C# / .NET</li><li>SQL Server</li><li>HTML · CSS · JS</li>
+    </ul>
+    <a class="btn" href="#contacto">Escríbeme</a>
+  </section>
+
+  <section id="proyectos" aria-labelledby="t-proy">
+    <h2 id="t-proy">Proyectos</h2>
+    <div class="filters" role="group" aria-label="Filtrar proyectos por tecnología">
+      <button type="button" class="filter is-on" data-filter="all" aria-pressed="true">Todos</button>
+      <button type="button" class="filter" data-filter="vue" aria-pressed="false">Vue</button>
+      <button type="button" class="filter" data-filter="angular" aria-pressed="false">Angular</button>
+      <button type="button" class="filter" data-filter="react" aria-pressed="false">React</button>
+    </div>
+
+    <article class="case" data-stack="vue">
+      <h3>INBROS · sitio web y portal del cliente</h3>
+      <p class="tag">Vue 3 + TypeScript · C# / .NET · SQL Server</p>
+      <p>Rediseño completo de la landing page y del portal del cliente, siguiendo la propuesta de una diseñadora, con versión responsiva en ambos.</p>
+      <div class="role"><strong>Lo que hice yo:</strong> implementé el nuevo diseño de la landing y del portal, adapté todo a móvil, creé y modifiqué controladores y endpoints en C#, escribí y ajusté consultas SQL, y agregué reCAPTCHA v3 de Google al acceso del portal.</div>
+      <p><a href="https://inbros.com" target="_blank" rel="noopener">Ver inbros.com en vivo</a></p>
+    </article>
+
+    <article class="case" data-stack="vue">
+      <h3>Incore · visor de cuentas clave</h3>
+      <p class="tag">Vue 3 + TypeScript · C# / .NET · SQL Server</p>
+      <p>Incore es el portal interno donde INBROS opera sus procesos. Aquí diseñé y desarrollé un tablero de pólizas con filtros dinámicos (periodo, cliente, ejecutivo, ramo, estatus y categoría), tarjetas resumen, un widget de renovaciones, vista por mes y un calendario de inicios de vigencia.</p>
+      <div class="role"><strong>Lo que hice yo:</strong> la interfaz completa del componente en Vue, y en el backend los endpoints y la lógica del módulo (filtros de selección múltiple y suma de prima neta) con la arquitectura Controllers → Facades → Repositories → DTOs.</div>
+      <div class="shots">
+        <figure><button type="button" class="zoom" data-full="assets/incore-vista-anual.png" data-alt="Visor de cuentas claves con filtros y tarjetas por mes"><img src="assets/incore-vista-anual.png" alt="Visor de cuentas claves con filtros y tarjetas por mes" loading="lazy"></button><figcaption>Vista anual por mes, con filtros y ordenamiento. Toca para ampliar.</figcaption></figure>
+        <figure><button type="button" class="zoom" data-full="assets/incore-calendario.png" data-alt="Calendario de inicios de vigencia con detalle por día"><img src="assets/incore-calendario.png" alt="Calendario de inicios de vigencia con detalle por día" loading="lazy"></button><figcaption>Calendario de vigencias con detalle del día. Toca para ampliar.</figcaption></figure>
+      </div>
+      <p class="note">Los datos de clientes y montos están ocultos por confidencialidad.</p>
+    </article>
+
+    <article class="case" data-stack="angular">
+      <h3>Sistema de inventario · empresa de construcción</h3>
+      <p class="tag">Angular · HD Software</p>
+      <p>Un CRUD ya existente para controlar inventario: dar de alta material, editar cantidades, eliminar, buscar y asignar material al personal.</p>
+      <div class="role"><strong>Lo que hice yo:</strong> correcciones de diseño, nuevas funciones de front-end y manejo de datos en el cliente, bajo supervisión del equipo.</div>
+      <p class="note">Proyecto anterior y privado; no tengo capturas, pero con gusto lo platico.</p>
+    </article>
+
+    <article class="case" data-stack="react">
+      <h3>Sitio en React · multilenguaje</h3>
+      <p class="tag">React · HD Software y MisDesarrollos</p>
+      <p>Trabajo de diseño responsivo, componentes en JSX y traducciones con i18n implementadas desde cero.</p>
+      <p class="note">Proyecto anterior; sin capturas disponibles.</p>
+    </article>
+  </section>
+
+  <section id="como-trabajo" aria-labelledby="t-como">
+    <h2 id="t-como">Cómo trabajo</h2>
+    <p class="wide">Me gusta entender bien el diseño antes de escribir código y cuidar que se vea bien en cualquier pantalla. Uso herramientas de IA como apoyo en mi día a día; mi base técnica me permite dirigirlas, revisar lo que producen y depurar cuando algo falla. Y si algo no lo sé todavía, lo digo y lo aprendo.</p>
+  </section>
+
+  <section id="contacto" aria-labelledby="t-cont">
+    <h2 id="t-cont">¿Platicamos?</h2>
+    <p class="wide">Escríbeme y con gusto te enseño cualquiera de estos proyectos en una llamada.</p>
+    <p><a class="btn" href="mailto:martinjlr8@gmail.com">martinjlr8@gmail.com</a>
+    <button id="copy" class="btn ghost" type="button">Copiar correo</button>
+    <span id="copy-msg" class="note" role="status" aria-live="polite"></span></p>
+  </section>
+</main>
+
+<dialog id="lightbox" aria-label="Captura ampliada">
+  <button type="button" class="icon-btn close" id="close" aria-label="Cerrar">✕</button>
+  <img id="lb-img" src="" alt="">
+</dialog>
+<script src="index.js"></script>
+</body>
+</html>
